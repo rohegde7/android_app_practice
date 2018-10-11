@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent iToReviewActivity = new Intent(this, ReviewInputActivity.class);
+        startActivity(iToReviewActivity);
+
         //Button slackButton = (Button)findViewById(R.id.buttonChange1);
 /*
         slackButton.setOnClickListener(new View.OnClickListener() {
