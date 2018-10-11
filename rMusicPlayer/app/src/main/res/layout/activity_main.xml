@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#000000">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Music"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:textSize="27dp"
+        android:id="@+id/mymusic_textview"
+        android:fontFamily="monospace"
+        android:textColor="#FFFFFF"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mymusic_textview"
+        android:id="@+id/audio_name_TextView"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <SeekBar
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/seekbar"
+        android:visibility="visible"
+        android:layout_below="@id/audio_name_TextView"
+        android:background="#000000"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/seekbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/playpause_ButtonLayout">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:text="Play"
+                android:id="@+id/playMusic_Button"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:text="Pause"
+                android:layout_marginTop="10dp"
+                android:id="@+id/pauseMusic_Button"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="stop"
+                android:id="@+id/stopmusic_Button"
+                android:layout_height="60dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/playpause_ButtonLayout"
+            android:id="@+id/seek_ButtonLayout">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:text="Seek -10 secs"
+                android:id="@+id/seekbefore_Button"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:text="Seek +10 secs"
+                android:layout_marginTop="10dp"
+                android:id="@+id/seekafter_Button"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
