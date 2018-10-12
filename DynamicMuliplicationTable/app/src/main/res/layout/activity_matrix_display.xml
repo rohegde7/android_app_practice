@@ -7,38 +7,35 @@
     tools:context=".MatrixDisplayActivity">
 
     <data>
+        <import type="com.example.android.dynamicmuliplicationtable.Util.StringUtil"/>
         <variable
             name="matrixTable"
             type="com.example.android.dynamicmuliplicationtable.models.Table"/>
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TableRow>
+            <TextView
+                android:layout_width="30dp"
+                android:id="@+id/row0_col0"
+                android:text="@{StringUtil.convertToString(matrixTable.mTableMatrix[0][1])}"/>
+            <TextView
+                android:layout_width="30dp"
+                android:id="@+id/row0_col1"
+                android:text="@{StringUtil.convertToString(matrixTable.mTableMatrix[0][1])}"/>
+        </TableRow>
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="213dp"
-            android:layout_height="71dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <TableRow>
+            <TextView
+                android:id="@+id/row1_col0"
+                android:text="@{StringUtil.convertToString(matrixTable.mTableMatrix[0][1])}"/>
+            <TextView
+                android:id="@+id/row1_col1"
+                android:text="@{StringUtil.convertToString(matrixTable.mTableMatrix[0][1])}"/>
+        </TableRow>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginRight="148dp"
-            android:text="Button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-    </android.support.constraint.ConstraintLayout>
+    </TableLayout>
 </layout>

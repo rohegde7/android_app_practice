@@ -18,7 +18,7 @@ public class MatrixDisplayActivity extends AppCompatActivity {
         //setContentView(R.layout.activity_matrix_display);
 
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_matrix_display);
-        Table matrixTable = new Table(5,5);
+        Table matrixTable = new Table(2,2);
         mBinding.setMatrixTable(matrixTable);
     }
 }

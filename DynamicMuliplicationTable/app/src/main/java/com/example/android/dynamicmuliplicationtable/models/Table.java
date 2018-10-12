@@ -2,9 +2,16 @@ package com.example.android.dynamicmuliplicationtable.models;
 
 public class Table {
 
-    private int mRow;
-    private int mColumn;
-    private int mTableMatrix[][];
+    public int mRow=0;
+    public int mColumn=0;
+    public int mTableMatrix[][] ;
+
+    /*
+    public int[][] sampleTable = {
+            {0,1},
+            {2,3}
+    };
+    */
 
     public Table(int row, int column){
         mRow = row;
@@ -19,14 +26,14 @@ public class Table {
             for(int j=0; j<mColumn; j++){
                 if(i==0 || j==0){   //for numbering complete 1st row and column
                     if(i==0){
-                        mTableMatrix[i][j] = j;  //traversing 1st row
+                        tempMatrix[i][j] = j;  //traversing 1st row
                     }
                     if(j==0){
-                        mTableMatrix[i][j] = i;  //traversing 1st column
+                        tempMatrix[i][j] = i;  //traversing 1st column
                     }
                 }
                 else{   //storing the multiplication in cells other than the 1st row and column
-                    mTableMatrix[i][j] = i*j;
+                    tempMatrix[i][j] = i*j;
                 }
             }
         }

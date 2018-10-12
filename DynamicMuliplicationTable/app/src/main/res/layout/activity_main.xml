@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <data>
+        <import type="com.example.android.dynamicmuliplicationtable.Util.StringUtil"/>
         <import type="com.example.android.dynamicmuliplicationtable.Util.IntegerUtil"/>
 
         <variable
@@ -27,7 +28,7 @@
             android:layout_marginTop="152dp"
             android:gravity="center_horizontal"
             android:ems="10"
-            android:text="@{IntegerUtil.IntegerToInt(matrixDimentions.rows)}"
+            android:text="@{StringUtil.convertToString(IntegerUtil.IntegerToInt(matrixDimentions.rows))}"
             android:inputType="number"
             app:layout_constraintEnd_toStartOf="@+id/editText2"
             app:layout_constraintHorizontal_bias="0.5"
@@ -43,7 +44,7 @@
             android:layout_marginTop="152dp"
             android:ems="10"
             android:inputType="number"
-            android:text="@{IntegerUtil.IntegerToInt(matrixDimentions.rows)}"
+            android:text="@{StringUtil.convertToString(IntegerUtil.IntegerToInt(matrixDimentions.columns))}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/editText"
