@@ -15,8 +15,11 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/root_view_table_layout"
+        android:layout_margin="7dp">
 
+        <!--
         <TableRow>
             <TextView
                 android:layout_width="30dp"
@@ -36,6 +39,7 @@
                 android:id="@+id/row1_col1"
                 android:text="@{StringUtil.convertToString(matrixTable.mTableMatrix[0][1])}"/>
         </TableRow>
+        -->
 
     </TableLayout>
 </layout>
