@@ -5,11 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.android.dynamicmuliplicationtable.databinding.ActivityMainBinding;
+import com.example.android.dynamicmuliplicationtable.databinding.ActivityMatrixDisplayBinding;
 import com.example.android.dynamicmuliplicationtable.models.Table;
 
 public class MatrixDisplayActivity extends AppCompatActivity {
 
-    ActivityMainBinding mBinding;
+    ActivityMatrixDisplayBinding mBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,6 @@ public class MatrixDisplayActivity extends AppCompatActivity {
 
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_matrix_display);
         Table matrixTable = new Table(5,5);
-
-
+        mBinding.setMatrixTable(matrixTable);
     }
 }

@@ -4,7 +4,7 @@ public class Table {
 
     private int mRow;
     private int mColumn;
-    int mTableMatrix[][];
+    private int mTableMatrix[][];
 
     public Table(int row, int column){
         mRow = row;
