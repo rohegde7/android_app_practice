@@ -76,7 +76,7 @@ public class MatrixDisplayActivity extends AppCompatActivity {
 
         //added A section to the main table layout
 
-        //creating the COMPONENT B,C,D and adding it to the MainROW view
+        //creating the COMPONENT B and adding it to the MainROW view:
         HorizontalScrollView horizontalScrollViewB = new HorizontalScrollView(this);
         horizontalScrollViewB.setBackgroundColor(Color.RED);
         horizontalScrollViewB.setId(R.id.horizontalScrollViewB);
@@ -189,7 +189,6 @@ public class MatrixDisplayActivity extends AppCompatActivity {
 
 
     private void createTableLayout(){
-
         createMatrix();
         createBasiclayout();
         createTableB();
