@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="tableA" type="id"/>
+    <item name="tableRowA" type="id"/>
+    <item name="textViewA" type="id"/>
+    <item name="tableRowMain1" type="id"/>
+    <item name="horizontalScrollViewB" type="id"/>
+    <item name="tableRowMain2" type="id"/>
+    <item name="horizontalScrollViewD" type="id"/>
+    <item name="scrollViewC" type="id"/>
+    <item name="scrollViewD" type="id"/>
+    <item name="tableB" type="id"/>
+    <item name="tableBRow" type="id"/>
+    <item name="tableC" type="id"/>
+    <item name="tableCRow" type="id"/>
+    <item name="tableD" type="id"/>
+    <item name="tableDRow" type="id"/>
+
+</resources>
