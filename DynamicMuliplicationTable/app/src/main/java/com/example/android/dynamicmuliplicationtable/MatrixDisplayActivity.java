@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
@@ -87,17 +88,18 @@ public class MatrixDisplayActivity extends AppCompatActivity {
         TableRow tableRowMain2 = new TableRow(this);
         tableRowMain2.setId(R.id.tableRowMain2);
 
-        ScrollView scrollViewC = new ScrollView(this);
+        SyncedScrollView  scrollViewC = new SyncedScrollView (this);
         scrollViewC.setId(R.id.scrollViewC);
 
         tableRowMain2.addView(scrollViewC);
         //done creating and adding it to the MAIN table layout
 
         //creating the section D and adding it to the RowC layout:
-        ScrollView scrollViewD = new ScrollView(this);
+        SyncedScrollView  scrollViewD = new SyncedScrollView (this);
         scrollViewD.setId(R.id.scrollViewD);
         HorizontalScrollView horizontalScrollViewD = new HorizontalScrollView(this);
         horizontalScrollViewD.setId(R.id.horizontalScrollViewD);
+        //horizontalScrollViewD.setLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         scrollViewD.addView(horizontalScrollViewD);
         tableRowMain2.addView(scrollViewD);
         //done with all the 4 SECTIONS
@@ -194,6 +196,37 @@ public class MatrixDisplayActivity extends AppCompatActivity {
         createTableB();
         createTableC();
         createTableD();
+        setupScrolling();
+    }
 
+    private void setupScrolling() {
+        ScrollNotifier view;
+        ScrollManager scrollManager = new ScrollManager();
+        HorizontalScrollManager horizontalScrollManager = new HorizontalScrollManager();
+
+        /*
+        view = (ScrollNotifier) findViewById(R.id.horizontalScrollViewB);
+        scrollManager.addScrollClient(view);
+        view = (ScrollNotifier) findViewById(R.id.horizontalScrollViewD);
+        scrollManager.addScrollClient(view);
+        */
+
+        /*
+
+        // timeline horizontal scroller
+        view = (ScrollNotifier) findViewById(R.id.horizontalScrollViewD);
+        scrollManager.addScrollClient(view);
+
+        // services vertical scroller
+        view = (ScrollNotifier) findViewById(R.id.horizontalScrollViewB);
+        scrollManager.addScrollClient(view);
+
+        */
+
+        // content area scrollers
+        view = (ScrollNotifier) findViewById(R.id.scrollViewC);
+        scrollManager.addScrollClient(view);
+        view = (ScrollNotifier) findViewById(R.id.scrollViewD);
+        scrollManager.addScrollClient(view);
     }
 }
